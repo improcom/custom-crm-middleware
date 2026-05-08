@@ -1,0 +1,7 @@
+crm-middleware*
+.crm-middleware/
+update.sh
+*.db*
+*.local
+bin/
+tmp/

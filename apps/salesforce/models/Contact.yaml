@@ -1,0 +1,59 @@
+id: Contact
+extend: true
+fields:
+  - id: Id
+    logic: id
+
+  - id: FirstName
+    label: First Name
+    logic: first_name
+
+  - id: LastName
+    label: Last Name
+    logic: last_name
+    required: true
+    locked: true
+
+  - id: Title
+    logic: title
+
+  - id: Phone
+    label: Phone Number
+    logic: phone
+
+  - id: MobilePhone
+    label: Phone Number, Mobile
+    logic: phone
+
+  - id: HomePhone
+    label: Phone Number, Home
+    logic: phone
+
+  - id: Fax
+    logic: phone
+
+  - id: Email
+    label: E-Mail
+    logic: email
+
+  - id: MailingStreet
+    label: Street
+
+  - id: Account
+    label: Company
+    association:
+      with: Account
+      id: Id
+      value: Name
+
+  - id: Owner
+    readonly: true
+    association:
+      with: User
+      id: Id
+      value: Name
+
+  - id: LastModifiedDate
+    label: Time Updated
+    type: timestamp
+    readonly: true

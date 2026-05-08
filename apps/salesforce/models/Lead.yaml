@@ -1,0 +1,62 @@
+id: Lead
+extend: true
+fields:
+  - id: Id
+    logic: id
+
+  - id: FirstName
+    label: First Name
+    logic: first_name
+
+  - id: LastName
+    label: Last Name
+    logic: last_name
+    required: true
+
+  - id: Phone
+    label: Phone Number
+    logic: phone
+
+  - id: MobilePhone
+    label: Phone Number, Mobile
+    logic: phone
+
+  - id: Fax
+    logic: phone
+
+  - id: Email
+    label: E-Mail
+    logic: email
+
+  - id: Street
+
+  - id: Company
+    required: true
+
+  - id: Status
+    list:
+      - id: Open - Not Contacted
+      - id: Working - Contacted
+      - id: Closed - Converted
+        label: Converted
+      - id: Closed - Not Converted
+        label: Closed
+
+  - id: Rating
+    list:
+      - id: Cold
+      - id: Warm
+      - id: Hot
+    default: Warm
+
+  - id: Owner
+    readonly: true
+    association:
+      with: User
+      id: Id
+      value: Name
+
+  - id: LastModifiedDate
+    label: Time Updated
+    type: timestamp
+    readonly: true

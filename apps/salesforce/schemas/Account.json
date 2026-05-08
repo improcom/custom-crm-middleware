@@ -1,0 +1,343 @@
+{
+	"id": "Account",
+	"label": "Account",
+	"extendable": true,
+	"fields": [
+		{
+			"id": "Id",
+			"label": "Id",
+			"type": "string",
+			"logic_type": "id",
+			"edit_type": "text",
+			"visibility": {
+				"view": false,
+				"create": false,
+				"edit": false,
+				"required": false,
+				"editable": false
+			}
+		},
+		{
+			"id": "Name",
+			"label": "Name",
+			"type": "string",
+			"logic_type": "first_name",
+			"edit_type": "text",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": true,
+				"editable": false
+			}
+		},
+		{
+			"id": "Parent",
+			"label": "Parent Company",
+			"type": "to_one",
+			"logic_type": "other",
+			"edit_type": "association",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			},
+			"relation": {
+				"object": "Account",
+				"fields": {
+					"id": "Id",
+					"value": "Name"
+				}
+			}
+		},
+		{
+			"id": "Phone",
+			"label": "Phone Number",
+			"type": "string",
+			"logic_type": "phone",
+			"edit_type": "text",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			}
+		},
+		{
+			"id": "Fax",
+			"label": "Fax",
+			"type": "string",
+			"logic_type": "phone",
+			"edit_type": "text",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			}
+		},
+		{
+			"id": "Website",
+			"label": "Website",
+			"type": "string",
+			"logic_type": "other",
+			"edit_type": "text",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			}
+		},
+		{
+			"id": "BillingStreet",
+			"label": "Street",
+			"type": "string",
+			"logic_type": "other",
+			"edit_type": "text",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			}
+		},
+		{
+			"id": "Industry",
+			"label": "Industry",
+			"type": "string",
+			"logic_type": "other",
+			"edit_type": "list",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			},
+			"list": {
+				"multiselect": false,
+				"default": {
+					"id": "Agriculture",
+					"value": "Agriculture"
+				},
+				"items": [
+					{
+						"id": "Agriculture",
+						"value": "Agriculture"
+					},
+					{
+						"id": "Apparel",
+						"value": "Apparel"
+					},
+					{
+						"id": "Banking",
+						"value": "Banking"
+					},
+					{
+						"id": "Biotechnology",
+						"value": "Biotechnology"
+					},
+					{
+						"id": "Chemicals",
+						"value": "Chemicals"
+					},
+					{
+						"id": "Communications",
+						"value": "Communications"
+					},
+					{
+						"id": "Construction",
+						"value": "Construction"
+					},
+					{
+						"id": "Consulting",
+						"value": "Consulting"
+					},
+					{
+						"id": "Education",
+						"value": "Education"
+					},
+					{
+						"id": "Electronics",
+						"value": "Electronics"
+					},
+					{
+						"id": "Energy",
+						"value": "Energy"
+					},
+					{
+						"id": "Engineering",
+						"value": "Engineering"
+					},
+					{
+						"id": "Entertainment",
+						"value": "Entertainment"
+					},
+					{
+						"id": "Environmental",
+						"value": "Environmental"
+					},
+					{
+						"id": "Finance",
+						"value": "Finance"
+					},
+					{
+						"id": "Food \u0026 Beverage",
+						"value": "Food \u0026 Beverage"
+					},
+					{
+						"id": "Government",
+						"value": "Government"
+					},
+					{
+						"id": "Healthcare",
+						"value": "Healthcare"
+					},
+					{
+						"id": "Hospitality",
+						"value": "Hospitality"
+					},
+					{
+						"id": "Insurance",
+						"value": "Insurance"
+					},
+					{
+						"id": "Machinery",
+						"value": "Machinery"
+					},
+					{
+						"id": "Manufacturing",
+						"value": "Manufacturing"
+					},
+					{
+						"id": "Media",
+						"value": "Media"
+					},
+					{
+						"id": "Not For Profit",
+						"value": "Not For Profit"
+					},
+					{
+						"id": "Other",
+						"value": "Other"
+					},
+					{
+						"id": "Recreation",
+						"value": "Recreation"
+					},
+					{
+						"id": "Retail",
+						"value": "Retail"
+					},
+					{
+						"id": "Shipping",
+						"value": "Shipping"
+					},
+					{
+						"id": "Technology",
+						"value": "Technology"
+					},
+					{
+						"id": "Telecommunications",
+						"value": "Telecommunications"
+					},
+					{
+						"id": "Utilities",
+						"value": "Utilities"
+					}
+				]
+			}
+		},
+		{
+			"id": "Rating",
+			"label": "Rating",
+			"type": "string",
+			"logic_type": "other",
+			"edit_type": "list",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			},
+			"list": {
+				"multiselect": false,
+				"default": {
+					"id": "Cold",
+					"value": "Cold"
+				},
+				"items": [
+					{
+						"id": "Cold",
+						"value": "Cold"
+					},
+					{
+						"id": "Warm",
+						"value": "Warm"
+					},
+					{
+						"id": "Hot",
+						"value": "Hot"
+					}
+				]
+			}
+		},
+		{
+			"id": "Description",
+			"label": "Description",
+			"type": "string",
+			"logic_type": "other",
+			"edit_type": "textarea",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			}
+		},
+		{
+			"id": "Owner",
+			"label": "Owner",
+			"type": "to_one",
+			"logic_type": "other",
+			"edit_type": "association",
+			"visibility": {
+				"view": true,
+				"create": false,
+				"edit": false,
+				"required": false,
+				"editable": false
+			},
+			"relation": {
+				"object": "User",
+				"fields": {
+					"id": "Id",
+					"value": "Name"
+				}
+			}
+		},
+		{
+			"id": "LastModifiedDate",
+			"label": "Time Updated",
+			"type": "timestamp",
+			"logic_type": "other",
+			"edit_type": "datetime",
+			"visibility": {
+				"view": true,
+				"create": false,
+				"edit": false,
+				"required": false,
+				"editable": false
+			}
+		}
+	]
+}

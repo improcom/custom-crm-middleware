@@ -1,0 +1,86 @@
+id: Account
+extend: true
+fields:
+  - id: Id
+    logic: id
+
+  - id: Name
+    logic: first_name
+    required: true
+    locked: true
+
+  - id: Parent
+    label: Parent Company
+    association:
+      with: Account
+      id: Id
+      value: Name
+
+  - id: Phone
+    label: Phone Number
+    logic: phone
+
+  - id: Fax
+    logic: phone
+
+  - id: Website
+
+  - id: BillingStreet
+    label: Street
+
+  - id: Industry
+    list:
+      - id: Agriculture
+      - id: Apparel
+      - id: Banking
+      - id: Biotechnology
+      - id: Chemicals
+      - id: Communications
+      - id: Construction
+      - id: Consulting
+      - id: Education
+      - id: Electronics
+      - id: Energy
+      - id: Engineering
+      - id: Entertainment
+      - id: Environmental
+      - id: Finance
+      - id: Food & Beverage
+      - id: Government
+      - id: Healthcare
+      - id: Hospitality
+      - id: Insurance
+      - id: Machinery
+      - id: Manufacturing
+      - id: Media
+      - id: Not For Profit
+      - id: Other
+      - id: Recreation
+      - id: Retail
+      - id: Shipping
+      - id: Technology
+      - id: Telecommunications
+      - id: Utilities
+    default: Agriculture
+
+  - id: Rating
+    list:
+      - id: Cold
+      - id: Warm
+      - id: Hot
+    default: Cold
+
+  - id: Description
+    edit: textarea
+
+  - id: Owner
+    readonly: true
+    association:
+      with: User
+      id: Id
+      value: Name
+
+  - id: LastModifiedDate
+    label: Time Updated
+    type: timestamp
+    readonly: true
