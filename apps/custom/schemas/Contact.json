@@ -1,0 +1,77 @@
+{
+	"id": "Contact",
+	"label": "Contact",
+	"extendable": false,
+	"fields": [
+		{
+			"id": "Id",
+			"label": "Id",
+			"type": "string",
+			"logic_type": "id",
+			"edit_type": "text",
+			"visibility": {
+				"view": false,
+				"create": false,
+				"edit": false,
+				"required": false,
+				"editable": false
+			}
+		},
+		{
+			"id": "FirstName",
+			"label": "First Name",
+			"type": "string",
+			"logic_type": "first_name",
+			"edit_type": "text",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			}
+		},
+		{
+			"id": "LastName",
+			"label": "Last Name",
+			"type": "string",
+			"logic_type": "last_name",
+			"edit_type": "text",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": true,
+				"editable": true
+			}
+		},
+		{
+			"id": "Phone",
+			"label": "Phone",
+			"type": "string",
+			"logic_type": "phone",
+			"edit_type": "text",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			}
+		},
+		{
+			"id": "Email",
+			"label": "Email",
+			"type": "string",
+			"logic_type": "email",
+			"edit_type": "text",
+			"visibility": {
+				"view": true,
+				"create": true,
+				"edit": true,
+				"required": false,
+				"editable": true
+			}
+		}
+	]
+}

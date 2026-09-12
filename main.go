@@ -2,6 +2,7 @@ package main
 
 import (
 	"crm-middleware/api"
+	"crm-middleware/apps/custom"
 	"crm-middleware/apps/salesforce"
 	"crm-middleware/cmd"
 	"crm-middleware/httputil"
@@ -33,6 +34,8 @@ func main() {
 	salesforce.App(api.AuthMethodOAuth2).Mount(router)
 	salesforce.App(api.AuthMethodBasicAuth).Mount(router)
 	salesforce.App(api.AuthMethodNone).Mount(router)
+
+	custom.App().Mount(router)
 
 	salesforce.RouterCustomSource(router)
 
