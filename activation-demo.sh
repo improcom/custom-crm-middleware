@@ -1,7 +1,7 @@
 #!/bin/sh
 # Replays the exact request sequence PBXware performs when a Custom CRM
-# integration is added and activated (observed live against PBXware 7 at
-# uc.improcom.com on 2026-09-12).
+# integration is added and activated (observed live against a PBXware 7
+# system on 2026-09-12).
 #
 # Usage:
 #   BASE=https://<middleware-host>/custom ID=<client-id> KEY=<api-key> ./activation-demo.sh

@@ -155,6 +155,7 @@ Plus:
 
 ## References
 
+- [`docs/pbxware-wire-reference.md`](../../docs/pbxware-wire-reference.md) — every request PBXware sends and the reply it expects, with the live-captured activation handshake
 - [`docs/API-docs.md`](../../docs/API-docs.md) — full endpoint contracts
 - [`docs/data-model.md`](../../docs/data-model.md) — schema format
 - [`apps/salesforce`](../salesforce) — complete reference implementation

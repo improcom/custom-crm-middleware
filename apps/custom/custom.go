@@ -56,7 +56,7 @@ func App() (c *custom) {
 	// AuthMethodBasicAuth: PBXware shows a username/password login inside
 	// the integration and POSTs it to LoginHandler below. The docs also
 	// list auth_method "none", but the PBXware build this was tested
-	// against (7.x at uc.improcom.com) rejects "none" during custom
+	// against (7.x) rejects "none" during custom
 	// integration activation, so basic-auth is the simplest working choice.
 	c.AuthHandlers = api.AuthHandlers{
 		Login:  c.LoginHandler,
